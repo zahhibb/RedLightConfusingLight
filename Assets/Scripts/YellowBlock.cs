@@ -10,7 +10,16 @@ public class YellowBlock : MonoBehaviour
     {
         if (light.isGreen || light.isRed)
         {
-            Destroy(gameObject);
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            StartCoroutine(RestoreBox());
         }
+    }
+
+    private IEnumerator RestoreBox()
+    {
+        yield return new WaitForSeconds(1);
+        GetComponent<Collider2D>().enabled = true;
+        GetComponent<SpriteRenderer>().enabled = true;
     }
 }
