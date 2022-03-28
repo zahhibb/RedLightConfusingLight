@@ -8,20 +8,12 @@ public class TrafficLight : MonoBehaviour
     public Sprite yellow;
     public Sprite green;
     public IsMoving _isMoving;
-    public bool isRed = true;
-    public bool isGreen = false;
+    public bool isRed = false;
+    public bool isGreen = true;
 
     private void Start()
     {
-        StartCoroutine(TurnYellow(true, 2f));
-    }
-
-    public void Update()
-    {
-        if (_isMoving.isMoving && isRed)
-        {
-            Debug.Log("Explode");
-        }
+        StartCoroutine(TurnYellow(false, 3f));
     }
 
     private IEnumerator TurnYellow(bool turnGreen, float time)

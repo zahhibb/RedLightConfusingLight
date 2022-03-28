@@ -27,7 +27,8 @@ public class LevelLoader : MonoBehaviour
     }
 
     public void Restart(){
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+        Debug.Log("click");
+        StartCoroutine(LoadLevel(1));
         DeathMenuCanvas.gameObject.SetActive(false);
     }
 }

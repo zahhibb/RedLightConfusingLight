@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private bool playerHasDied = false;
     private float deathMenuAppearTime = 1f;
 
-    public GameObject Player;
+    public PlayerController player;
     public Transform DeathMenuCanvas;
+    public TrafficLight trafficLight;
 
     void Update()
     {
-        if (UnityEngine.Input.GetKeyDown(KeyCode.T))
+        if (player.Velocity != Vector3.zero && trafficLight.isRed)
         {
-            Player.GetComponent<PlayerController>().KillPlayer();
+            player.KillPlayer();
             StartCoroutine(DeathMenu());
         }
     }
@@ -23,6 +23,5 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(deathMenuAppearTime);
         DeathMenuCanvas.gameObject.SetActive(true);
-        // DeathMenuCanvas.GetComponent<Animator>().SetBool("ShowDeathMenu", true);
     }
 }

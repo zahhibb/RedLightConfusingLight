@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 2830138372124086527}
   transitionTime: 1
+  DeathMenuCanvas: {fileID: 5912030647025606508, guid: 58d5053a272a01147807106e95bc0a84, type: 3}
 --- !u!1 &2830138372124086526
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,3 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc251533cd6b824498c38b4e70472a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 6432609860406773168, guid: 42303504a4fc90a43bc5178df9876bf2, type: 3}
+  DeathMenuCanvas: {fileID: 5912030647025606508, guid: 58d5053a272a01147807106e95bc0a84, type: 3}
+  trafficLight: {fileID: 6779241893710930173, guid: 06acb3012fbbaf34faa562bdd3fa5f6b, type: 3}

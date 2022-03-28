@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bcd0afa0ba763194b960b4166933e4ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8556e34a432b6d44ea7efe412189a56a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,10 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edcd7b6249b8a604caa0e188d04e6617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: {fileID: 21300000, guid: bcd0afa0ba763194b960b4166933e4ea, type: 3}
-  yellow: {fileID: 21300000, guid: 4bf1f87a299c88a45ade86dde03c6511, type: 3}
-  green: {fileID: 21300000, guid: a29eac8eb65d3fe4e8c5802d884e017a, type: 3}
+  red: {fileID: 21300000, guid: 972e5fc0a3c7e5a40896a445389d353e, type: 3}
+  yellow: {fileID: 21300000, guid: b2d693bc5e6a9e74caecc6b69796e450, type: 3}
+  green: {fileID: 21300000, guid: 8556e34a432b6d44ea7efe412189a56a, type: 3}
   _isMoving: {fileID: 3217596277476706918}
+  isRed: 0
+  isGreen: 1
 --- !u!114 &3217596277476706918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +114,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d279c34644bad41a5829cca3152738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 6432609860406773168, guid: 42303504a4fc90a43bc5178df9876bf2, type: 3}
+  isMoving: 0
