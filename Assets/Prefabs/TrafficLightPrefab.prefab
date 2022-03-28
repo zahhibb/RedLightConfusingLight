@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5959830816507471640
+--- !u!1 &6510116551445249874
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6700308907192122412}
-  - component: {fileID: 8416583429242072559}
-  - component: {fileID: 905420398181146028}
+  - component: {fileID: 9140323640046443248}
+  - component: {fileID: 5760289555784301591}
+  - component: {fileID: 6779241893710930173}
   m_Layer: 0
-  m_Name: YellowToRedLightPrefab
+  m_Name: TrafficLightPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6700308907192122412
+--- !u!4 &9140323640046443248
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5959830816507471640}
+  m_GameObject: {fileID: 6510116551445249874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 500}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8416583429242072559
+--- !u!212 &5760289555784301591
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5959830816507471640}
+  m_GameObject: {fileID: 6510116551445249874}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4bf1f87a299c88a45ade86dde03c6511, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bcd0afa0ba763194b960b4166933e4ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,16 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &905420398181146028
+--- !u!114 &6779241893710930173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5959830816507471640}
+  m_GameObject: {fileID: 6510116551445249874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f36359d0722c910418a6cd1da6188863, type: 3}
+  m_Script: {fileID: 11500000, guid: edcd7b6249b8a604caa0e188d04e6617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RedLightPrefab: {fileID: 5781177759047885446, guid: da5ec35040be81e4cb2878835ef1bbb5, type: 3}
+  red: {fileID: 21300000, guid: bcd0afa0ba763194b960b4166933e4ea, type: 3}
+  yellow: {fileID: 21300000, guid: 4bf1f87a299c88a45ade86dde03c6511, type: 3}
+  green: {fileID: 21300000, guid: a29eac8eb65d3fe4e8c5802d884e017a, type: 3}

@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2256184180842479423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 500}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,4 +95,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd310d0b2dcaee4f9c51d53ca78c018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GreenLightPrefab: {fileID: 241186408827709288, guid: 8b73457840e0cfb40b1fd288dc86b54b, type: 3}
+  GreenLightPrefab: {fileID: 6708256978838641343, guid: e153f28eb8885e7468d0c6db38692eea, type: 3}
