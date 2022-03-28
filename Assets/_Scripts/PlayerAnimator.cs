@@ -86,7 +86,7 @@ public class PlayerAnimator : MonoBehaviour
         // Splat
         if (_player.LandingThisFrame)
         {
-            _anim.SetTrigger (GroundedKey);
+            _anim.SetTrigger(GroundedKey);
 
             if (_source != null)
                 _source
@@ -97,14 +97,14 @@ public class PlayerAnimator : MonoBehaviour
         // Jump effects
         if (_player.JumpingThisFrame)
         {
-            _anim.SetTrigger (JumpKey);
-            _anim.ResetTrigger (GroundedKey);
+            _anim.SetTrigger(JumpKey);
+            _anim.ResetTrigger(GroundedKey);
 
             // Only play particles when grounded (avoid coyote)
             if (_player.Grounded)
             {
-                SetColor (_jumpParticles);
-                SetColor (_launchParticles);
+                SetColor(_jumpParticles);
+                SetColor(_launchParticles);
                 _jumpParticles.Play();
             }
         }
@@ -119,7 +119,7 @@ public class PlayerAnimator : MonoBehaviour
             _landParticles.transform.localScale =
                 Vector3.one *
                 Mathf.InverseLerp(0, _maxParticleFallSpeed, _movement.y);
-            SetColor (_landParticles);
+            SetColor(_landParticles);
             _landParticles.Play();
         }
         else if (_playerGrounded && !_player.Grounded)
@@ -140,7 +140,7 @@ public class PlayerAnimator : MonoBehaviour
             _currentGradient =
                 new ParticleSystem.MinMaxGradient(r.color * 0.9f,
                     r.color * 1.2f);
-            SetColor (_moveParticles);
+            SetColor(_moveParticles);
         }
         _movement = _player.RawMovement; // Previous frame movement is more valuable
     }
@@ -164,7 +164,7 @@ public class PlayerAnimator : MonoBehaviour
     }
 
 
-#region Animation Keys
+    #region Animation Keys
 
     private static readonly int GroundedKey = Animator.StringToHash("Grounded");
 
@@ -174,5 +174,5 @@ public class PlayerAnimator : MonoBehaviour
     private static readonly int JumpKey = Animator.StringToHash("Jump");
 
 
-#endregion
+    #endregion
 }
