@@ -4,9 +4,23 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
-    public Transform canvas;
+    public Transform text;
+
+    private bool hasWon = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        canvas.gameObject.SetActive(true);
+        if (collision.CompareTag("Player"))
+        {
+            hasWon = true;
+        }
+    }
+
+    void Update()
+    {
+        if (hasWon)
+        {
+            text.gameObject.SetActive(true);
+        }
     }
 }
