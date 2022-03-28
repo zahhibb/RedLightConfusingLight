@@ -7,16 +7,27 @@ public class TrafficLight : MonoBehaviour
     public Sprite red;
     public Sprite yellow;
     public Sprite green;
+    public IsMoving _isMoving;
+    bool isRed = true;
 
     private void Start()
     {
         StartCoroutine(TurnYellow(true));
     }
 
+    public void Update()
+    {
+        if (_isMoving.isMoving && isRed)
+        {
+            Debug.Log("Explode");
+        }
+    }
+
     private IEnumerator TurnYellow(bool turnGreen)
     {
         yield return new WaitForSeconds(5);
         this.GetComponent<SpriteRenderer>().sprite = yellow;
+        isRed = false;
         if (turnGreen)
         {
             StartCoroutine(TurnGreenTurnYellow());
@@ -38,6 +49,7 @@ public class TrafficLight : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         this.GetComponent<SpriteRenderer>().sprite = red;
+        isRed = true;
         StartCoroutine(TurnYellow(true));
     }
 }
