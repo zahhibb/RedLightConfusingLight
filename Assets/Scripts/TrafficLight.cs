@@ -42,10 +42,10 @@ public class TrafficLight : MonoBehaviour
 
     private IEnumerator TurnGreenTurnYellow()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.25f);
         this.GetComponent<SpriteRenderer>().sprite = green;
         isGreen = true;
-        StartCoroutine(TurnYellow(false, 5f));
+        StartCoroutine(TurnYellow(false, 3f));
     }
 
     private IEnumerator TurnRedTurnYellow()
@@ -53,6 +53,6 @@ public class TrafficLight : MonoBehaviour
         yield return new WaitForSeconds(1);
         this.GetComponent<SpriteRenderer>().sprite = red;
         isRed = true;
-        StartCoroutine(TurnYellow(true, 2f));
+        StartCoroutine(TurnYellow(true, 1.5f));
     }
 }
