@@ -13,7 +13,7 @@ public class YellowToRedLight : MonoBehaviour
     }
     private IEnumerator TurnRed()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
         Instantiate(RedLightPrefab, Position, Quaternion.identity);
         Destroy(gameObject);
     }

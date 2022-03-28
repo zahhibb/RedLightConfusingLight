@@ -13,7 +13,7 @@ public class YellowToGreenLight : MonoBehaviour
     }
     private IEnumerator TurnGreen()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
         Instantiate(GreenLightPrefab, Position, Quaternion.identity);
         Destroy(gameObject);
     }
