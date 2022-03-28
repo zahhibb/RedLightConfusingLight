@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
     public bool LandingThisFrame { get; private set; }
     public Vector3 RawMovement { get; private set; }
     public bool Grounded => _colDown;
-    public bool PlayerIsMoving = false;
+
+    public ParticleSystem playerDeathParticle;
 
     private Vector3 _lastPosition;
     private float _currentHorizontalSpeed, _currentVerticalSpeed;
@@ -37,12 +38,6 @@ public class PlayerController : MonoBehaviour, IPlayerController
         CalculateJump(); // Possibly overrides vertical
 
         MoveCharacter(); // Actually perform the axis movement
-
-        if (Input.X > 0 || Input.X < 0 || Input.JumpDown)
-        {
-            Debug.Log("IS MOVING");
-            PlayerIsMoving = true;
-        }
     }
 
 
@@ -63,6 +58,11 @@ public class PlayerController : MonoBehaviour, IPlayerController
     }
 
     #endregion
+
+    public void KillPlayer(){
+        Instantiate(playerDeathParticle, transform.position, Quaternion.identity);
+        gameObject.SetActive(false);
+    }
 
     #region Collisions
 
